@@ -10,13 +10,17 @@
   "permissions": [
     "activeTab",
     "tabs",
+    "storage",
     "*://localizejs.com/*",
     "webRequest",
     "webRequestBlocking",
     "\u003Call_urls>"
   ],
+
+  "options_page": "popup.html",
   "browser_action": {
-    "default_icon": "icon.png"
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
   },
   "update_url": "http://clients2.google.com/service/update2/crx",
   "manifest_version": 2
