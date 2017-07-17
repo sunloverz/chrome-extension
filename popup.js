@@ -3,7 +3,7 @@
 
 document.body.onload = function() {
     chrome.storage.sync.get("isEnabled", function(items) {
-        if (!chrome.runtime.error && items.isEnabled == true) {
+        if (!chrome.runtime.error && items.isEnabled) {
             chrome.tabs.query({'active': true}, function (tabs) {
                var url = tabs[0].url;
                chrome.runtime.sendMessage({popupOpen: true, url: url});
